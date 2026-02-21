@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vZAFH0Yf)
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=22666839)
 # Assignment 6: Neural Network Showdown
 
 Build and compare neural network architectures on image and time-series data using Keras.
@@ -84,6 +82,20 @@ jupyter nbconvert --execute assignment.ipynb
 ```
 
 Or open `assignment.ipynb` in Jupyter/VS Code and run cells interactively.
+
+## Debugging and Diagnostics
+
+The `helpers.py` module provides several functions to help you understand your data and diagnose issues:
+
+| Function | Purpose |
+| :--- | :--- |
+| `plot_sample_images(X, y, class_names)` | Display a grid of CIFAR-10 images — verify data loaded correctly |
+| `plot_ecg_traces(X, y, class_names)` | Plot ECG heartbeats by class — understand the time-series data |
+| `plot_training_history(history, save_path)` | Plot accuracy/loss curves — diagnose overfitting vs. underfitting |
+| `plot_confusion_matrix(y_true, y_pred, names, save_path)` | Visualize which classes get confused — find model weaknesses |
+| `plot_predictions(X, y_true, y_pred, class_names)` | Show images with correct/wrong labels — see what the model gets right and wrong |
+
+Also use `model.summary()` after building each model to verify your architecture (layer shapes, parameter counts) before training.
 
 ## Checking Your Work
 
